@@ -1,0 +1,12 @@
+<div class="container intro"
+	 ng-style="{ 'background-image': 'url(' + background + ')'}"
+	 ng-class="{'visible': isVisible}"
+	 ng-keydown="continueGame($event);">
+	<div id="boxContent" class="content" ng-show="message.length" tabindex="0" aria-describedby="txtIntro">
+		<div id="txtIntro" class="text" ng-bind-html="message"></div>
+	</div>
+	<div class="footer">
+		<button id="btnSkip" ng-click="skipIntro();" ng-hide="isOutro">{{l10n.BTN_SKIP_INTRO}}</button>
+		<button id="btnNext" ng-click="continueGame($event);">{{l10n.BTN_NEXT}} <span class="icon-arrow-right"></span></button>
+	</div>
+</div>

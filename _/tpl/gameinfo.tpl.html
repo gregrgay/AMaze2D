@@ -1,0 +1,17 @@
+<div class="container gameinfo" ng-keydown="gameInfoKeydownHandler($event)" tabindex="0">
+	<div class="content" tabindex="0">
+		<div class="main" ng-bind-html="message"></div>
+		<div>
+			<button  ng-click="openMenu($event)" ng-keydown="openMenu($event)">{{l10n.BTN_CLOSE}}</button>
+		</div>
+	</div>
+	<div class="footer">
+		<p><a href="#/gameinfo/about">{{l10n.BTN_ABOUT}}</a> |
+			<a href="#/gameinfo/terms">{{l10n.BTN_TERMS}}</a> |
+			<a href="#/gameinfo/accessibility">{{l10n.BTN_ACCESSIBILITY}}</a> |
+			<a href="#/gameinfo/contacts">{{l10n.BTN_CONTACTS}}</a>
+		</p>
+		<p ng-bind-html="l10n.TXT_LICENSE"></p>
+		<p>&copy;The G. Raymond Chang School of Continuing Education, Ryerson University</p>
+	</div>
+</div>

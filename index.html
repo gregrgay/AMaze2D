@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{game.settings.locale}}" ng-app="amaze" ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Play the Accessibility Maze for a fun way to learn about web accessibility, and making websites accessible to people with disabilities. "/>
+    <meta name="keywords" content="web accessibility, game, learn about accessibility, serious game, learn about WCAG, keyboard access, text for images, label forms, pause timer"/>
+    <meta property="og:type" content="website" >
+    <meta property="og:site_name" content="Accessibility Maze" >
+	<meta property="og:url" content="https://de.ryerson.ca/games/accessibility/" >
+	<meta property="og:title" content="Accessibility Maze" >
+	<meta property="og:description" content="A fun way to learn about web accessibility challenges and solutions." >
+	<meta property="og:image" content="https://de.ryerson.ca/games/accessibility/_/img/game_og.png" >
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <base href="/test/amaze/">
+    <title>{{l10n.TXT_GAME_TITLE}}</title>
+    <link rel="stylesheet" href="_/amaze.css">
+    <link rel="stylesheet" href="_/icomoon.css">
+    <script src="_/jquery.min.js"></script>
+    <script src="_/angular.min.js"></script>
+    <script src="_/angular-route.js"></script>
+    <script src="_/angular-cookies.js"></script>
+    <script src="_/angular-sanitize.js"></script>
+    <script src="_/underscore.min.js"></script>
+    <script src="_/preloadjs.min.js"></script>
+    <script src="_/soundjs.min.js"></script>
+    <script src="_/amaze.js"></script>
+</head>
+<body ng-controller="splashCtrl">
+    <div ng-view class="view" ng-hide="isMobile"></div>
+    <div ng-show="isMobile" class="overlay mobile">
+        <img src="_/img/title.png" alt="Accessibility Maze">
+        <div style="margin-bottom: 1rem;" language-select></div>
+        <div class="dialog" style="text-align: center;" ng-bind-html="l10n.TXT_MOBILE"></div>
+    </div>
+</body>
+</html>

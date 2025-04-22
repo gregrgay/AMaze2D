@@ -1,0 +1,14 @@
+<div class="container splash">
+	<div class="content">
+		<img src="_/img/splash.png" alt="{{l10n.TXT_GAME_TITLE}}">
+		<div style="margin-bottom: 1rem;" language-select></div>
+		<button id="btnStart" ng-show="assetsLoaded" ng-click="startGame()"> {{l10n.BTN_ENTER}} </button>
+	</div>
+	<div class="footer">
+		<div class="awards">
+			<p><span class="star">&#9733;</span> {{l10n.TXT_AWARD}} <span class="star">&#9733;</span></p>
+		</div>
+		<p ng-bind-html="l10n.TXT_LICENSE"></p>
+		<p>&copy;The G. Raymond Chang School of Continuing Education, Ryerson University</p>
+	</div>
+</div>

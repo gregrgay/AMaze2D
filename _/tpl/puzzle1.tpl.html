@@ -1,0 +1,29 @@
+<div class="container puzzle1" ng-keydown="puzzle1KeyDownHandler($event)" tabindex="0">
+	<div class="topbar">
+		<div class="tools">
+			<button ng-click="openMenu($event)" ng-keydown="openMenu($event)"
+					title="{{l10n.BTN_MENU}}" aria-label="{{l10n.BTN_MENU}}"><span class="icon-menu"></span></button>
+			<button ng-click="toggleAmbientSound($event)" ng-keydown="toggleAmbientSound($event)"
+					title="{{l10n.BTN_TOGGLE_MUSIC}}" aria-label="{{l10n.BTN_TOGGLE_MUSIC}}"
+					ng-class="{ 'pressed' : game.settings.music }"><span class="icon-volume-2"></span></button>
+		</div>
+		<div class="inventory">
+			<div ng-repeat="item in game.inventory track by item.id" ng-class="item.class"></div>
+		</div>
+	</div>
+	<div class="content" tabindex="1" role="application" aria-describedby="hint">
+		<div class="main">
+			<div class="hint" id="hint" ng-show="hint.length" ng-bind-html="hint"></div>
+			<div class="display" ng-class="{ 'unlocked': !locked, 'blinking': error }" role="region" aria-live="polite">{{ message }}</div>
+			<div class="panel" ng-show="showPanel"><img src="_/img/puzzles/panel_01.png" alt=""></div>
+			<div class="controls">
+				<div ng-repeat="btn in buttons" class="togglebutton" role="button" tabindex="1" ng-click="noMouseMessage();"
+					 ng-keydown="toggleButton($event, $index)" ng-focus="checkForMissingPlate()"
+					 aria-pressed="{{btn.pressed}}" aria-label="{{ showPanel ? btn.label : '' }}"></div>
+			</div>
+		</div>
+	</div>
+	<div class="actionLog" role="region" aria-live="assertive">
+		&nbsp;<span ng-bind-html="actionLog"></span>&nbsp;
+	</div>
+</div>

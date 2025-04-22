@@ -1,0 +1,1054 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Annie Use Your Telescope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/annieuseyourtelescope/v11/daaLSS4tI2qYYl3Jq9s_Hu74xwktnlKxH6osGVGTkz3F.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v40/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf) format('truetype');
+}
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 4vh;
+  line-height: 1.2;
+  background-color: #000;
+  color: #fff;
+}
+*,
+*::before,
+*::after {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+p {
+  margin: 0.3em 0;
+  padding: 0;
+}
+a {
+  color: #fb0;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+form {
+  display: inline-block;
+}
+.view,
+.container {
+  width: 100%;
+  height: 100%;
+}
+.awards {
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #fc3;
+}
+.awards .star {
+  display: inline-block;
+  padding: 0 0.3rem;
+  font-size: 1em;
+  vertical-align: 0.05em;
+}
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/splash_bg.png");
+  background-position: center center;
+  background-size: cover;
+}
+.container.splash {
+  justify-content: flex-end;
+}
+.container.splash img {
+  height: auto;
+  width: 70vh;
+  max-width: 90%;
+}
+.container.splash .footer {
+  position: relative;
+}
+.container.menu .content {
+  margin-bottom: 3rem;
+}
+.container.menu img {
+  width: 9em;
+  margin-bottom: 1em;
+}
+.container.menu button {
+  min-width: 10em;
+}
+.container.warning .content {
+  position: relative;
+  width: 23em;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1.5em 2em;
+  line-height: 1.5;
+  font-size: 3vh;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+}
+.container.gameinfo .content,
+.container.summary .content {
+  position: relative;
+  width: 30em;
+  max-width: 90%;
+  padding: 1.5em 2em;
+  font-size: 3vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+}
+.container.gameinfo .content .message,
+.container.summary .content .message {
+  max-height: 40vh;
+  margin: 0.5em 0;
+  overflow-y: auto;
+}
+.container.gameinfo .content .message strong,
+.container.summary .content .message strong {
+  text-decoration: underline;
+}
+.container.gameinfo .content .footer,
+.container.summary .content .footer {
+  position: relative;
+  padding-bottom: 0;
+}
+.container.intro {
+  background-position: center bottom;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.container.intro.visible {
+  opacity: 1;
+}
+.container.intro .content {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  max-width: 20em;
+  min-height: 3em;
+  padding: 1em;
+  text-shadow: none;
+  background-color: #ffc;
+  color: #000;
+  border: 0.1em solid #000;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  -webkit-box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+}
+.container.intro .footer {
+  text-align: right;
+  font-size: 1em;
+}
+.container.level .content {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+}
+.container.puzzle1 .content {
+  width: 103vh;
+  height: 77.7vh;
+  margin-bottom: 0;
+  border: 0.2rem solid #666;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+.container.puzzle1 .content:focus {
+  border-color: #fc3;
+}
+.container.puzzle1 .content .main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #666 url(img/puzzles/puzzle_01.png) no-repeat center top;
+  background-size: contain;
+  border: 0.05em solid #000;
+}
+.container.puzzle1 .hint {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 45%;
+  padding: 1em;
+  font-size: 0.7em;
+  background-color: #ffc;
+  color: #000;
+  border: 0.1em solid #000;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  -webkit-box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+}
+.container.puzzle1 .display {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  width: 38%;
+  padding: 0.1em;
+  line-height: 1;
+  padding-right: 14%;
+  font-size: 1em;
+  text-align: center;
+  color: red;
+}
+.container.puzzle1 .display.unlocked {
+  color: green;
+}
+.container.puzzle1 .controls {
+  position: absolute;
+  top: 21vh;
+  bottom: 13vh;
+  right: 0;
+  width: 39%;
+  padding: 4vh 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.container.puzzle1 .controls .togglebutton {
+  width: 6vh;
+  height: 6vh;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 0.2em solid #333;
+  background-color: #664;
+  cursor: pointer;
+  box-shadow: inset 0.2em 0.2em 0 #fff;
+}
+.container.puzzle1 .controls .togglebutton:focus {
+  background-color: #997;
+}
+.container.puzzle1 .controls .togglebutton[aria-pressed=true] {
+  background-color: #ffc;
+  border-color: #fff;
+  box-shadow: 0 0 1em 0.3em #fff;
+}
+.container.puzzle1 .panel {
+  position: absolute;
+  top: 19.4vh;
+  bottom: 14vh;
+  right: 0;
+  width: 30.8%;
+}
+.container.puzzle1 .panel img {
+  height: 100%;
+  width: auto;
+}
+.container.puzzle2 .content {
+  position: relative;
+  width: 103vh;
+  height: 77.7vh;
+  margin-bottom: 0;
+  border: 0.2rem solid #666;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+.container.puzzle2 .content:focus {
+  border-color: #fc3;
+}
+.container.puzzle2 .content .main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #666 url(img/puzzles/puzzle_02.png) no-repeat center top;
+  background-size: contain;
+  border: 0.05em solid #000;
+}
+.container.puzzle2 .hint {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 45%;
+  padding: 1em;
+  font-size: 0.7em;
+  background-color: #ffc;
+  color: #000;
+  border: 0.1em solid #000;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  -webkit-box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+}
+.container.puzzle2 .display {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  width: 38%;
+  padding: 0.1em;
+  line-height: 1;
+  padding-right: 14%;
+  font-size: 1em;
+  text-align: center;
+  color: red;
+}
+.container.puzzle2 .display.unlocked {
+  color: green;
+}
+.container.puzzle2 .controls {
+  position: absolute;
+  top: 16vh;
+  bottom: 27vh;
+  right: 0;
+  width: 39%;
+  padding: 4vh 13vh 4vh 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.container.puzzle2 .controls button {
+  width: 8vh;
+  height: 8vh;
+  margin: 0.5vh 0;
+  padding: 0;
+  text-align: center;
+  -webkit-border-radius: 4vh;
+  -moz-border-radius: 4vh;
+  border-radius: 4vh;
+  border: 0.2em solid #333;
+  background-color: #CCC06F;
+  cursor: pointer;
+  box-shadow: inset 0.2em 0.2em 0 rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+.container.puzzle2 .controls button:focus {
+  background-color: #eee39f;
+  box-shadow: inset 0.2em 0.2em 0 rgba(255, 255, 255, 0.5), 0 0 0 0.2em #fff;
+  /*box-shadow: inset 0.2em 0.2em 0 rgba(255, 255, 255, 0.5),
+								0 0 .3em .3em rgba(255, 255, 255, 0.5),
+								0 0 0.3rem .1rem rgba(255, 255, 255, 0.5);*/
+}
+.container.puzzle2 .controls button:active {
+  color: #fff;
+}
+.container.puzzle2 .controls button.enter {
+  width: 18vh;
+  color: #363;
+}
+.container.puzzle2 .controls button.cancel {
+  color: #933;
+}
+.container.puzzle2 .flip {
+  position: absolute;
+  bottom: 5vh;
+  left: 15vh;
+  width: 40vh;
+  height: 40vh;
+  transform: rotate(-10deg);
+  transform-origin: bottom;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 10000px;
+  perspective: 1000px;
+  outline: none;
+}
+.container.puzzle2 .flip:hover .front,
+.container.puzzle2 .flip:focus .front,
+.container.puzzle2 .flip:hover .back,
+.container.puzzle2 .flip:focus .back {
+  box-shadow: 0 0 0 0.2em #fc3;
+}
+.container.puzzle2 .flip:hover .hint,
+.container.puzzle2 .flip:focus .hint {
+  display: block;
+}
+.container.puzzle2 .flip .hint {
+  display: none;
+  top: auto;
+  bottom: 5em;
+  right: 1em;
+  left: 1em;
+  width: auto;
+  padding: 0.5em;
+  line-height: 1;
+  font-size: 1rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  border: none;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  box-shadow: none;
+}
+.container.puzzle2 .flip .photo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.container.puzzle2 .flip .photo .front,
+.container.puzzle2 .flip .photo .back {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transition: transform 0.3s;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.container.puzzle2 .flip .photo .front img,
+.container.puzzle2 .flip .photo .back img {
+  width: 100%;
+  height: 100%;
+}
+.container.puzzle2 .flip .photo .front {
+  -webkit-transform: rotate3d(0, 1, 0, 0);
+  -moz-transform: rotate3d(0, 1, 0, 0);
+  -ms-transform: rotate3d(0, 1, 0, 0);
+  transform: rotate3d(0, 1, 0, 0);
+  z-index: 2;
+}
+.container.puzzle2 .flip .photo .back {
+  -webkit-transform: rotate3d(0, 1, 180deg);
+  -moz-transform: rotate3d(0, 1, 0, 180deg);
+  -ms-transform: rotate3d(0, 1, 0, 180deg);
+  transform: rotate3d(0, 1, 0, 180deg);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Annie Use Your Telescope";
+  color: #000;
+}
+.container.puzzle2 .flip.flipped .front {
+  -webkit-transform: rotate3d(0, 1, 0, -180deg);
+  -moz-transform: rotate3d(0, 1, 0, -180deg);
+  -ms-transform: rotate3d(0, 1, 0, -180deg);
+  transform: rotate3d(0, 1, 0, -180deg);
+}
+.container.puzzle2 .flip.flipped .back {
+  -webkit-transform: rotate3d(0, 1, 0, 0);
+  -moz-transform: rotate3d(0, 1, 0, 0);
+  -ms-transform: rotate3d(0, 1, 0, 0);
+  transform: rotate3d(0, 1, 0, 0);
+}
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.content .main {
+  width: 100%;
+}
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+  font-size: 0.7em;
+  text-align: center;
+  text-shadow: 0 2px 3px #000;
+}
+.footer a {
+  color: #fb0;
+  text-decoration: none;
+}
+.footer a:hover,
+.footer a:focus {
+  color: #fff;
+}
+.topbar {
+  width: 103.5vh;
+  margin-bottom: 1vh;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: flex-end;
+  font-size: 0.8em;
+}
+.topbar .tools {
+  margin-left: 2em;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.topbar .tools button {
+  width: 5vh;
+  height: 5vh;
+  padding: 0;
+  font-size: 2.5vh;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.topbar .tools button [class^="icon-"],
+.topbar .tools button [class*=" icon-"] {
+  color: #000;
+}
+.topbar .tools button.pressed {
+  background-color: #f60;
+  color: white;
+}
+.topbar .tools button.pressed [class^="icon-"],
+.topbar .tools button.pressed [class*=" icon-"] {
+  color: inherit;
+  text-shadow: none;
+}
+.topbar .tools button[disabled] [class^="icon-"],
+.topbar .tools button[disabled] [class*=" icon-"] {
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0.15);
+}
+.topbar .tools button[disabled]:hover [class^="icon-"],
+.topbar .tools button[disabled]:focus [class^="icon-"],
+.topbar .tools button[disabled]:hover [class*=" icon-"],
+.topbar .tools button[disabled]:focus [class*=" icon-"] {
+  text-shadow: none;
+  color: inherit;
+}
+.topbar .inventory {
+  width: 100%;
+  height: 6.375vh;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.topbar .inventory .tile {
+  position: relative;
+  width: 6.375vh;
+  height: 6.375vh;
+}
+.topbar .inventory .tile .counter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1.4em;
+  line-height: 1.5em;
+  min-width: 1.4em;
+  background-color: #c00;
+  -webkit-border-radius: 0.7em;
+  -moz-border-radius: 0.7em;
+  border-radius: 0.7em;
+  color: #fff;
+  font-size: 0.6em;
+  text-align: center;
+}
+.actionLog {
+  width: 103.5vh;
+  margin-top: 0.5rem;
+  padding: 0.3rem;
+  background-color: #222;
+  text-align: center;
+  border: 0.2rem solid #666;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.5), inset 0 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+.map {
+  display: grid;
+  grid-template-columns: repeat(12, 8.5vh);
+  background-image: url(img/tiles/path.png);
+  background-position: left top;
+  background-size: 8.5vh 8.5vh;
+  border: 0.2rem solid #666;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.3em 0.3em 0 rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+.map:focus {
+  border-color: #fc3;
+}
+.overlay {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay.mobile {
+  background-image: url("img/splash_bg.png");
+  background-position: center center;
+  background-size: cover;
+  justify-content: flex-start;
+}
+.overlay.mobile img {
+  max-width: 80%;
+  margin: 2em 0 1em 0;
+}
+.overlay.mobile .dialog {
+  max-width: 80%;
+  margin-bottom: 2em;
+  padding: 0.8em 1em;
+  font-size: 0.7rem;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 9px;
+  color: #fc3;
+}
+.overlay.mobile .dialog h1 {
+  color: #e60;
+  text-transform: uppercase;
+}
+.overlay.mobile .dialog p {
+  margin: 0.5em 0;
+}
+.overlay.mobile .dialog strong {
+  text-decoration: underline;
+}
+.overlay.mobile .dialog a {
+  color: #fff;
+}
+.overlay .dialog {
+  width: 28em;
+  margin: 1em;
+  padding: 1.5em 2em;
+  font-size: 3vh;
+  background-color: #ffc;
+  color: #000;
+  border: 0.1em solid #000;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+}
+.overlay .dialog h1 {
+  font-size: 1.4em;
+  color: #643;
+}
+.overlay .dialog p {
+  margin: 0.8em 0;
+}
+.overlay .dialog .message .content {
+  display: block;
+  margin: 0.5em 0;
+}
+.overlay .dialog .message strong {
+  text-decoration: underline;
+}
+.overlay .dialog .footer {
+  position: relative;
+  padding-bottom: 0;
+  font-size: inherit;
+}
+.overlay .dialog.book {
+  width: 99vh;
+  height: 78vh;
+  background: transparent url(img/book/book_bg.png) no-repeat center top;
+  background-size: contain;
+  color: #643;
+  border: none;
+  text-shadow: none;
+}
+.overlay .dialog.book .message {
+  height: 100%;
+}
+.overlay .dialog.book .columns {
+  box-sizing: border-box;
+  height: 85%;
+  margin: 2em;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  -webkit-column-gap: 4em;
+  -moz-column-gap: 4em;
+  column-gap: 4em;
+  -moz-column-fill: auto;
+  column-fill: auto;
+  font-family: "Annie Use Your Telescope";
+  font-size: 0.8em;
+}
+.overlay .dialog.book .passcode {
+  font-size: 2em;
+  text-align: center;
+}
+.overlay .dialog.book img {
+  width: 100%;
+  height: auto;
+}
+.overlay .dialog.book .column_break_after {
+  break-after: column;
+}
+.overlay .dialog.book .footer {
+  position: absolute;
+}
+.overlay .dialog.chest {
+  width: auto;
+  padding: 2em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  border: none;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  text-shadow: 0 2px 3px #000;
+}
+.overlay .dialog.chest .treasure {
+  width: 8em;
+  height: 8em;
+  margin: 0 auto;
+  background-size: cover;
+}
+.overlay .dialog.chest .treasure.panel_01 {
+  background-image: url("img/chest/panel_large.png");
+}
+.overlay .dialog.chest .treasure.nitrogen {
+  background-image: url("img/chest/nitrogen_large.png");
+}
+.overlay .dialog.chest .treasure.cat_photo {
+  background-image: url("img/chest/cat_large.png");
+}
+.overlay .dialog.prof {
+  position: relative;
+  width: 102vh;
+  height: 77vh;
+  margin-bottom: 5.6vh;
+  background: transparent url(img/intro/prof_01.png) no-repeat center top;
+  background-size: contain;
+  border: none;
+  text-shadow: none;
+}
+.overlay .dialog.prof .text {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  max-width: 20em;
+  min-height: 3em;
+  padding: 1em;
+  text-shadow: none;
+  background-color: #ffc;
+  color: #000;
+  border: 0.1em solid #000;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  -webkit-box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.25);
+}
+.tile {
+  width: 8.5vh;
+  height: 8.5vh;
+  background-size: cover;
+}
+.tile.wall {
+  background-image: url("img/tiles/wall.png");
+}
+.tile.secret {
+  background-image: url("img/tiles/secret.png");
+}
+.tile.blob {
+  background-image: url("img/tiles/hero.png");
+}
+.tile.blob_animated {
+  background-image: url("img/tiles/hero.png");
+  transform-origin: bottom;
+  animation: happyjump 0.4s infinite;
+}
+.tile.prof {
+  background-image: url("img/tiles/prof.png");
+}
+.tile.prof_animated {
+  background-image: url("img/tiles/prof.png");
+  transform-origin: bottom;
+  animation: happyjump 0.9s infinite;
+}
+.tile.door {
+  background-image: url("img/tiles/lock.png");
+}
+.tile.book {
+  background-image: url("img/tiles/book.png");
+}
+.tile.chest {
+  background-image: url("img/tiles/chest.png");
+}
+.tile.chest.unlocked {
+  background-image: url("img/tiles/chest_open.png");
+}
+.tile.panel_01 {
+  background-image: url("img/chest/panel_small.png");
+}
+.tile.nitrogen {
+  background-image: url("img/chest/nitrogen_small.png");
+}
+.tile.cat_photo {
+  background-image: url("img/chest/cat_small.png");
+}
+.tile.key {
+  background-image: url("img/tiles/key.png");
+}
+.tile.exit {
+  background-image: url("img/tiles/exit.png");
+}
+.tile.exit.down {
+  transform: rotate(90deg);
+}
+.tile.exit_animated {
+  background-image: url("img/tiles/exit.png");
+  animation: bounceright 0.4s infinite;
+}
+.tile.exit_animated.down {
+  animation: bouncedown 0.4s infinite;
+}
+.tile.shaking {
+  animation: shake 0.2s 2;
+}
+.tile.gem.blue {
+  background-image: url("img/tiles/gem_blue.png");
+}
+.tile.gem.pink {
+  background-image: url("img/tiles/gem_pink.png");
+}
+.tile.gem.yellow {
+  background-image: url("img/tiles/gem_yellow.png");
+}
+.tile.switch {
+  background-image: url("img/tiles/lever_off.png");
+}
+.tile.switch.on {
+  background-image: url("img/tiles/lever_on.png");
+}
+.tile.switch.on.frozen {
+  background-image: url("img/tiles/lever_on_frozen.png");
+}
+.tile.bubble {
+  background-image: url("img/tiles/bubble.png");
+}
+.tile.bubble:hover,
+.tile.bubble.wobble {
+  animation: wobble 0.3s 1;
+}
+.tile.puzzle1,
+.tile.puzzle2 {
+  background-image: url("img/tiles/lock.png");
+}
+.blinking {
+  animation: 0.4s blink 2;
+}
+button {
+  margin: 5px;
+  font: inherit;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  border: none;
+  padding: 0.3em 1em;
+  line-height: 1.2;
+  -webkit-border-radius: 1.5em;
+  -moz-border-radius: 1.5em;
+  border-radius: 1.5em;
+  cursor: pointer;
+  outline: none;
+  pointer-events: auto;
+  background-color: #fb0;
+  box-shadow: 0 0.2rem 0.3em rgba(0, 0, 0, 0.5), inset 0 1.5em 0 -0.5em rgba(255, 255, 255, 0.25);
+}
+button:hover,
+button:focus {
+  box-shadow: inset 0 1.5em 0 -0.5em rgba(255, 255, 255, 0.25), 0 0 0 0.2em #fff;
+  background-color: #ffc933;
+}
+button:hover [class^="icon-"],
+button:focus [class^="icon-"],
+button:hover [class*=" icon-"],
+button:focus [class*=" icon-"] {
+  text-shadow: 0 0 5px #fff, 0 0 15px #fff;
+}
+button:active {
+  background-color: #f60;
+}
+button[disabled] {
+  color: rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  cursor: default;
+}
+button[disabled]:hover,
+button[disabled]:focus {
+  box-shadow: none;
+  background-color: #fb0;
+}
+button[disabled]:hover [class^="icon-"],
+button[disabled]:focus [class^="icon-"],
+button[disabled]:hover [class*=" icon-"],
+button[disabled]:focus [class*=" icon-"] {
+  text-shadow: none;
+}
+button [class^="icon-"],
+button [class*=" icon-"] {
+  color: #fff;
+}
+.readersonly {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  text-indent: -99999px;
+}
+.shortcut {
+  white-space: nowrap;
+}
+kbd {
+  margin: 0.1rem;
+  padding: 0 0.3rem;
+  border-radius: 0.1rem;
+  font-family: inherit;
+  font-size: 0.7rem;
+  background-color: #fff;
+  color: #000;
+}
+select {
+  padding: 0.1rem 0.3rem;
+  font: inherit;
+  border: 0;
+  border-radius: 0.3rem;
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+}
+ol,
+ul {
+  padding-left: 1.2rem;
+}
+@keyframes happyjump {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(0.95, 1.02, 1);
+  }
+  70% {
+    transform: scale3d(1.02, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes bounceright {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate3d(0.3em, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bouncedown {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(90deg);
+  }
+  30% {
+    transform: translate3d(0, 0.3em, 0) rotate(90deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(90deg);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes wobble {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(0.9, 1.1, 1);
+  }
+  70% {
+    transform: scale3d(1.1, 0.9, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pop {
+  0% {
+    transform: scale(1) rotate(-10deg);
+  }
+  50% {
+    transform: scale(1.3) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1) rotate(-10deg);
+  }
+}
+/*# sourceMappingURL=amaze.css.map */

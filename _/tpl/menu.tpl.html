@@ -1,0 +1,19 @@
+<div class="container menu">
+	<div class="content">
+		<img src="_/img/title.png" alt="{{l10n.TXT_GAME_TITLE}}">
+		<div style="margin-bottom: 1rem;" language-select></div>
+		<button ng-click="startNew()">{{l10n.BTN_NEW_GAME}}</button>
+		<button ng-click="resumeSaved()" ng-disabled="!game.started">{{l10n.BTN_RESUME_SAVED}}</button>
+		<button ng-click="showObjectives()">{{l10n.BTN_OBJECTIVES}}</button>
+		<button ng-click="showInstructions()">{{l10n.BTN_HOW_TO}}</button>
+	</div>
+	<div class="footer">
+		<p><a href="#/gameinfo/about">{{l10n.BTN_ABOUT}}</a> |
+			<a href="#/gameinfo/terms">{{l10n.BTN_TERMS}}</a> |
+			<a href="#/gameinfo/accessibility">{{l10n.BTN_ACCESSIBILITY}}</a> |
+			<a href="#/gameinfo/contacts">{{l10n.BTN_CONTACTS}}</a>
+		</p>
+		<p ng-bind-html="l10n.TXT_LICENSE"></p>
+		<p>&copy;The G. Raymond Chang School of Continuing Education, Ryerson University</p>
+	</div>
+</div>

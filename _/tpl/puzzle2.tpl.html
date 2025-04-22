@@ -1,0 +1,45 @@
+<div class="container puzzle2" ng-keydown="puzzleKeyDownHandler($event)" tabindex="0">
+	<div class="topbar">
+		<div class="tools">
+			<button ng-click="openMenu($event)" ng-keydown="openMenu($event)"
+					title="{{l10n.BTN_MENU}}" aria-label="{{l10n.BTN_MENU}}"><span class="icon-menu"></span></button>
+			<button ng-click="toggleAmbientSound($event)" ng-keydown="toggleAmbientSound($event)"
+					title="{{l10n.BTN_TOGGLE_MUSIC}}" aria-label="{{l10n.BTN_TOGGLE_MUSIC}}"
+					ng-class="{ 'pressed' : game.settings.music }"><span class="icon-volume-2"></span></button>
+		</div>
+		<div class="inventory">
+			<div ng-repeat="item in game.inventory track by item.id" ng-class="item.class"></div>
+		</div>
+	</div>
+	<div class="content" tabindex="1" role="application" aria-labelledby="hint">
+		<div class="main">
+			<div class="hint" id="hint" ng-show="hint.length" ng-bind-html="hint"></div>
+			<div class="display" ng-class="{ 'unlocked': !locked, 'blinking': error }" role="region" aria-live="polite">{{ message }}</div>
+			<div class="flip" tabindex="1" aria-hidden="{{!pictureInFocus}}"
+				 ng-focus="showHint(l10n.TXT_PRESS_SPACEBAR)"
+				 ng-blur="showHint('')"
+				 ng-keydown="flipPhoto($event)"
+				 ng-class="{ 'flipped': flippedOver }"
+				 ng-show="showPhoto">
+				<div class="photo" role="region" aria-live="polite">
+					<div class="front" aria-hidden="{{flippedOver}}">
+						<img src="_/img/chest/cat_large.png" alt="">
+						<div class="readersonly">{{l10n.TXT_L1_PHOTO}}</div>
+						<div class="hint">{{l10n.TXT_PRESS_SPACEBAR}}</div>
+					</div>
+					<div class="back" aria-hidden="{{!flippedOver}}">
+						<div>F<span aria-hidden='true' class='readersonly'>.</span>E<span aria-hidden='true' class='readersonly'>.</span>L<span aria-hidden='true' class='readersonly'>.</span>I<span aria-hidden='true' class='readersonly'>.</span>X</div>
+					</div>
+				</div>
+			</div>
+			<div class="controls">
+				<button ng-repeat="btn in buttons" ng-keydown="enterCode($event, btn)" ng-click="noMouseMessage();" tabindex="1">{{btn}}</button>
+				<button class="cancel" ng-keydown="clearCode($event)" ng-click="noMouseMessage();" tabindex="1" aria-label="Clear">C</button>
+				<button class="enter" ng-keydown="validateCode($event)" ng-click="noMouseMessage();" tabindex="1">{{l10n.BTN_ENTER}}</button>
+			</div>
+		</div>
+	</div>
+	<div class="actionLog" role="region" aria-live="assertive">
+		&nbsp;<span ng-bind-html="actionLog"></span>&nbsp;
+	</div>
+</div>

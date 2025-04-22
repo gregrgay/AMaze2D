@@ -1,0 +1,12 @@
+<div class="multitext">
+	<div ng-bind-html="textArray[current]" role="region" aria-live="polite"></div>
+	<div class="nav" ng-show="textArray.length > 1">
+		<div class="pages" aria-live="assertive"><span class="readersonly">Page </span>{{ current + 1 }} of {{ textArray.length }} </div>
+		<button class="prev round" ng-click="prev();" ng-disabled="current == first" aria-label="previous">
+			<span class="icon">&#10132;</span>
+		</button>
+		<button class="next round" ng-click="next();" ng-disabled="current == last" aria-label="next">
+			<span class="icon">&#10132;</span>
+		</button>
+	</div>
+</div>

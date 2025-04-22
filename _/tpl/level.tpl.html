@@ -1,0 +1,34 @@
+<div class="container level" ng-keydown="mapKeyDownHandler($event)">
+	<div class="topbar">
+		<div class="tools">
+			<button ng-click="openHelp($event)" ng-keydown="openHelp($event)"
+					title="{{l10n.BTN_HELP}}" aria-label="{{l10n.BTN_HELP}}">?</button>
+			<button ng-click="openMenu($event)" ng-keydown="openMenu($event)"
+					title="{{l10n.BTN_MENU}}" aria-label="{{l10n.BTN_MENU}}"><span class="icon-menu"></span></button>
+			<button ng-click="toggleAnimation($event)" ng-keydown="toggleAnimation($event)"
+					title="{{l10n.BTN_TOGGLE_ANIMATION}}" aria-label="{{l10n.BTN_TOGGLE_ANIMATION}}"
+					ng-class="{ 'pressed' : game.settings.animation }"><span class="icon-play"></span></button>
+			<button ng-click="toggleAmbientSound($event)" ng-keydown="toggleAmbientSound($event)"
+					title="{{l10n.BTN_TOGGLE_MUSIC}}" aria-label="{{l10n.BTN_TOGGLE_MUSIC}}"
+					ng-class="{ 'pressed' : game.settings.music }"><span class="icon-volume-2"></span></button>
+		</div>
+		<div class="inventory">
+			<div ng-repeat="item in game.inventory track by item.id" ng-class="item.class">
+				<div class="counter" ng-show="item.counter>1">{{item.counter}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="map" tabindex="1" role="application" aria-label="{{l10n[game.level.description]}}">
+			<div class="tile" ng-repeat="tile in game.level.floorplan" ng-class="tile.class" ng-click="tileClickHandler($event, tile)"></div>
+		</div>
+	</div>
+	<div class="actionLog" role="region" aria-live="assertive">
+		<span ng-bind-html="actionLog"></span>&nbsp;
+	</div>
+	<div class="overlay" ng-show="message.length"  ng-keydown="dialogKeyDownHandler($event)" tabindex="0">
+		<div ng-class="{'book' : isBook, 'chest' : isChest, 'prof': isProf}" class="dialog" tabindex="0">
+			<div class="message" ng-bind-html="message"></div>
+		</div>
+	</div>
+</div>

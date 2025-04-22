@@ -1,0 +1,527 @@
+{
+    "intro": [
+        {
+            "image": "_/img/intro/intro_01.png",
+            "content": "TXT_INTRO_SLIDE_01"
+        },
+        {
+            "image": "_/img/intro/intro_02.png",
+            "content": "TXT_INTRO_SLIDE_02"
+        },
+        {
+            "image": "_/img/intro/intro_03.png",
+            "content": "TXT_INTRO_SLIDE_03"
+        },
+        {
+            "image": "_/img/intro/intro_04.png",
+            "content": "TXT_INTRO_SLIDE_04"
+        },
+        {
+            "image": "_/img/intro/intro_05.png",
+            "content": "TXT_INTRO_SLIDE_05"
+        },
+        {
+            "image": "_/img/intro/intro_06.png",
+            "content": "TXT_INTRO_SLIDE_06"
+        },
+        {
+            "image": "_/img/intro/intro_07.png",
+            "content": "TXT_INTRO_SLIDE_07"
+        },
+        {
+            "image": "_/img/intro/intro_08.png",
+            "content": "TXT_INTRO_SLIDE_08"
+        },
+        {
+            "image": "_/img/intro/intro_09.png",
+            "content": "TXT_INTRO_SLIDE_09"
+        }
+    ],
+    "levels": [
+        {
+            "floorplan": [
+                ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"],
+                ["wall", "green", "green", "green", "green", "green", "green", "wall", "green", "green", "green", "wall"],
+                ["blob", "green", "green", "green", "green", "green", "green", "green", "green", "green", "green", "wall"],
+                ["wall", "green", "green", "green", "green", "green", "green", "wall", "green", "green", "green", "wall"],
+                ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "green", "green", "green", "wall"],
+                ["wall", "green", "green", "green", "green", "green", "green", "wall", "green", "green", "green", "wall"],
+                ["wall", "green", "green", "green", "green", "green", "green", "green", "green", "green", "green", "wall"],
+                ["wall", "green", "green", "green", "green", "green", "green", "wall", "green", "green", "green", "wall"],
+                ["wall", "wall", "wall", "exit down", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall"]
+            ],
+            "description": "TXT_L1_INFO",
+            "items": [
+                {
+                    "class": "blue gem",
+                    "collectable": true,
+                    "row": 2,
+                    "col": 7,
+                    "data": {
+                        "name": "TXT_GEM_BLUE"
+                    }
+                },
+                {
+                    "class": "pink gem",
+                    "collectable": true,
+                    "row": 6,
+                    "col": 6,
+                    "data": {
+                        "name": "TXT_GEM_PINK"
+                    }
+                },
+                {
+                    "class": "yellow gem",
+                    "collectable": true,
+                    "row": 6,
+                    "col": 8,
+                    "data": {
+                        "name": "TXT_GEM_YELLOW"
+                    }
+                },
+                {
+                    "class": "book",
+                    "collectable": false,
+                    "row": 1,
+                    "col": 9,
+                    "data": {
+                        "content": "TXT_L1_BOOK"
+                    }
+                },
+                {
+                    "class": "key",
+                    "collectable": true,
+                    "row": 7,
+                    "col": 9,
+                    "data": {
+                        "name": "TXT_KEY"
+                    }
+                },
+                {
+                    "class": "chest",
+                    "collectable": false,
+                    "row": 5,
+                    "col": 10,
+                    "data": {
+                        "requires": 93,
+                        "collected": false,
+                        "treasure": {
+                            "class": "cat_photo",
+                            "collectable": false,
+                            "name": "TXT_L1_PHOTO"
+                        }
+                    }
+                },
+                {
+                    "class": "puzzle2",
+                    "collectable": false,
+                    "row": 6,
+                    "col": 7,
+                    "data": {
+                        "requires": 70,
+                        "collected": false,
+                        "solved": false,
+                        "hint": "TXT_L1_PUZZLE"
+                    }
+                }
+            ],
+            "inventory": [],
+            "lesson": "TXT_L1_LESSON"
+        },
+        {
+            "floorplan": [
+                ["wall", "wall",  "wall",  "blob",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall"],
+                ["wall", "wall", "green", "green", "green", "green", "wall",  "wall",  "wall",  "wall",  "wall",  "wall"],
+                ["wall", "wall",  "green", "green", "green", "green", "wall",  "wall",  "green", "green", "green", "exit"],
+                ["wall", "wall",  "green", "green", "green", "green", "wall",  "wall",  "green", "green", "green", "wall"],
+                ["wall", "wall",  "wall",  "wall",  "green", "wall",  "wall",  "wall",  "green", "green", "green", "wall"],
+                ["wall", "green", "green", "wall",  "green", "green", "green", "green", "green", "green", "green", "wall"],
+                ["wall", "green", "green", "wall",  "green", "green", "green", "wall",  "wall",  "wall",  "wall",  "wall"],
+                ["wall", "green", "green", "green", "green", "green", "green", "wall",  "wall",  "wall",  "wall",  "wall"],
+                ["wall", "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall"]
+            ],
+            "description": "TXT_L2_INFO",
+            "items": [
+                {
+		            "class": "book",
+                    "collectable": false,
+                    "row": 1,
+                    "col": 5,
+                    "data": {
+	                    "content": "TXT_L2_BOOK"
+                    }
+	            },
+                {
+                    "class": "blue gem",
+                    "collectable": true,
+                    "row": 5,
+                    "col": 2,
+                    "data": {
+                        "name": "TXT_GEM_BLUE"
+                    }
+                },
+                {
+                    "class": "pink gem",
+                    "collectable": true,
+                    "row": 7,
+                    "col": 6,
+                    "data": {
+                        "name": "TXT_GEM_PINK"
+                    }
+                },
+                {
+                    "class": "yellow gem",
+                    "collectable": true,
+                    "row": 2,
+                    "col": 8,
+                    "data": {
+                        "name": "TXT_GEM_YELLOW"
+                    }
+                },
+                {
+                    "class": "key",
+                    "collectable": true,
+                    "row": 7,
+                    "col": 1,
+                    "data": {
+                        "name": "TXT_KEY"
+                    }
+                },
+                {
+                    "class": "secret",
+                    "collectable": false,
+                    "row": 7,
+                    "col": 3,
+                    "data": {
+                        "attempts": 3,
+                        "treasure": {
+                            "class": "green",
+                            "collectable": false,
+                            "name": ""
+                        }
+                    }
+                },
+                {
+                    "class": "chest",
+                    "collectable": false,
+                    "row": 3,
+                    "col": 2,
+                    "data": {
+                        "requires": 85,
+                        "collected": false,
+                        "treasure": {
+                            "class": "panel_01",
+                            "collectable": false,
+                            "name": "TXT_L2_PLATE"
+                        }
+                    }
+                },
+                {
+                    "class": "puzzle1",
+                    "collectable": false,
+                    "row": 5,
+                    "col": 7,
+                    "data": {
+                        "requires": 38,
+                        "collected": false,
+                        "solved": false,
+                        "hint": "TXT_L2_PUZZLE"
+                    }
+                }
+            ],
+            "inventory": [],
+            "lesson": "TXT_L2_LESSON"
+        },
+        {
+            "floorplan": [
+                ["wall",  "wall",  "wall",  "wall", "wall",   "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall"],
+                ["wall",  "green", "green", "green", "green", "green", "green", "green", "green", "green", "green", "wall"],
+                ["blob",  "green", "wall",  "green", "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall"],
+                ["wall",  "wall",  "wall",  "green", "wall",  "green", "green", "green", "green", "green", "green", "wall"],
+                ["wall",  "green", "wall",  "green", "wall",  "wall",  "green", "wall",  "wall",  "wall",  "green", "wall"],
+                ["wall",  "green", "wall",  "green", "green", "wall",  "green", "wall",  "green", "green", "green", "wall"],
+                ["wall",  "green", "wall",  "green", "green", "wall",  "green", "wall",  "green", "wall",  "wall",  "wall"],
+                ["wall",  "green", "green", "green", "green", "green", "green", "wall",  "green", "green", "green", "exit"],
+                ["wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall",  "wall"]
+            ],
+            "description": "TXT_L3_INFO",
+            "items": [
+	            {
+		            "class": "book",
+                    "collectable": false,
+                    "row": 3,
+                    "col": 5,
+                    "data": {
+	                    "content": "TXT_L3_BOOK"
+                    }
+	            },
+                {
+                    "class": "blue gem",
+                    "collectable": true,
+                    "row": 6,
+                    "col": 1,
+                    "data": {
+                        "name": "TXT_GEM_BLUE"
+                    }
+                },
+                {
+                    "class": "pink gem",
+                    "collectable": true,
+                    "row": 3,
+                    "col": 10,
+                    "data": {
+                        "name": "TXT_GEM_PINK"
+                    }
+                },
+                {
+                    "class": "secret",
+                    "collectable": false,
+                    "row": 5,
+                    "col": 1,
+                    "data": {
+                        "attempts": 3,
+                        "treasure": {
+                            "class": "green",
+                            "collectable": false,
+                            "name": ""
+                        }
+                    }
+                },
+                {
+                    "class": "secret",
+                    "collectable": false,
+                    "row": 4,
+                    "col": 1,
+                    "data": {
+                        "attempts": 3,
+                        "treasure": {
+                            "class": "yellow gem",
+                            "collectable": true,
+                            "name": "TXT_GEM_YELLOW"
+                        }
+                    }
+                },
+                {
+                    "class": "key",
+                    "collectable": true,
+                    "row": 7,
+                    "col": 8,
+                    "data": {
+                        "name": "TXT_KEY"
+                    }
+                },
+                {
+                    "class": "chest",
+                    "collectable": false,
+                    "row": 5,
+                    "col": 4,
+                    "data": {
+                        "requires": 92,
+                        "collected": false,
+                        "treasure": {
+                            "class": "nitrogen",
+                            "collectable": false,
+                            "name": "TXT_L3_SPRAY"
+                        }
+                    }
+                },
+                {
+                    "class": "switch",
+                    "collectable": false,
+                    "row": 1,
+                    "col": 10,
+                    "data": {
+                        "controls": 93,
+                        "requires": 64,
+                        "collected": false,
+                        "timeout": 5000
+                    }
+                },
+                {
+                    "class": "door",
+                    "collectable": false,
+                    "row": 7,
+                    "col": 9,
+                    "data": {
+                        "locked": true,
+                        "requires": -1,
+                        "collected": false,
+                        "puzzle": null
+                    }
+                }
+            ],
+            "inventory": [],
+            "lesson": "TXT_L3_LESSON"
+        },
+        {
+            "floorplan": [
+                ["wall", "wall",  "wall",  "wall",  "wall",  "wall",  "wall",   "wall",   "wall",      "wall",   "wall",   "wall"],
+	            ["wall", "wall",  "wall",  "green", "green", "green", "green",  "green",  "green",     "green",  "green",  "wall"],
+	            ["wall", "green", "green", "green", "green", "green", "green",  "green",  "green",     "wall",   "wall",  "wall"],
+	            ["wall", "wall",  "wall",  "green", "green", "green", "green",  "green",  "green",     "wall",   "wall",   "wall"],
+	            ["wall", "wall",  "wall",  "green", "wall",  "wall",  "wall",   "green",  "wall",      "wall",   "green",   "wall"],
+	            ["wall", "green", "green", "green", "wall",  "wall",  "bubble", "bubble", "bubble",    "bubble", "bubble", "wall"],
+	            ["wall", "green", "green", "green", "wall",  "wall",  "bubble", "bubble", "bubble",    "bubble", "bubble", "wall"],
+	            ["blob", "green", "green", "green", "wall",  "wall",  "bubble", "bubble", "bubble",    "bubble", "bubble", "wall"],
+	            ["wall", "wall",  "wall",  "wall",  "wall",  "wall",  "wall",   "wall",   "exit down", "wall",   "wall",   "wall"]
+            ],
+            "description": "TXT_L4_INFO",
+            "items": [
+	            {
+		            "class": "book",
+                    "collectable": false,
+                    "row": 1,
+                    "col": 3,
+                    "data": {
+	                    "content": "TXT_L4_BOOK"
+                    }
+	            },
+                {
+                    "class": "yellow gem",
+                    "collectable": true,
+                    "row": 1,
+                    "col": 10,
+                    "data": {
+                        "name": "TXT_GEM_YELLOW"
+                    }
+                },
+                {
+                    "class": "pink gem",
+                    "collectable": true,
+                    "row": 5,
+                    "col": 1,
+                    "data": {
+                        "name": "TXT_GEM_PINK"
+                    }
+                },
+                {
+                    "class": "key",
+                    "collectable": true,
+                    "row": 2,
+                    "col": 1,
+                    "data": {
+                        "name": "TXT_KEY"
+                    }
+                },
+                {
+                    "class": "door",
+                    "collectable": false,
+                    "row": 4,
+                    "col": 7,
+                    "data": {
+                        "locked": true,
+	                    "requires": 25,
+                        "collected": false,
+		                "puzzle": null
+		            }
+                },
+                {
+                    "class": "secret",
+                    "collectable": false,
+                    "row": 2,
+                    "col": 2,
+                    "data": {
+                        "attempts": 3,
+                        "treasure": {
+                            "class": "green",
+                            "collectable": false,
+                            "name": ""
+                        }
+                    }
+                },
+                {
+                    "class": "secret",
+                    "collectable": false,
+                    "row": 1,
+                    "col": 9,
+                    "data": {
+                        "attempts": 3,
+                        "treasure": {
+                            "class": "green",
+                            "collectable": false,
+                            "name": ""
+                        }
+                    }
+                },
+                {
+                    "class": "secret",
+                    "collectable": false,
+                    "row": 4,
+                    "col": 10,
+                    "data": {
+                        "attempts": 3,
+                        "treasure": {
+                            "class": "blue gem",
+                            "collectable": true,
+                            "name": "TXT_GEM_BLUE"
+                        }
+                    }
+                }
+            ],
+            "inventory": [],
+            "lesson": "TXT_L4_LESSON"
+        },
+        {
+            "floorplan": [
+                ["wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "blob", "wall", "wall", "wall"],
+                ["wall", "wall", "wall", "wall", "wall", "wall", "green", "green", "green", "wall", "wall", "wall"],
+                ["wall", "wall", "wall", "wall", "wall", "wall", "green", "wall", "wall", "wall", "wall", "wall"],
+                ["wall", "wall", "wall", "wall", "wall", "wall", "green", "wall", "wall", "wall", "wall", "wall"],
+                ["wall", "wall", "wall", "wall", "green", "green", "green", "green", "green", "wall", "wall", "wall"],
+                ["wall", "wall", "wall", "wall", "prof", "green", "green", "green", "green", "wall", "wall", "wall"],
+                ["wall", "wall", "wall", "wall", "green", "green", "green", "green", "green", "wall", "wall", "wall"],
+                ["wall", "wall", "wall", "wall", "green", "green", "green", "green", "green", "wall", "wall", "wall"],
+                ["wall", "wall", "wall", "wall", "wall", "wall", "green", "wall", "wall", "wall", "wall", "wall"]
+            ],
+            "description": "",
+            "items": [
+                {
+                    "class": "door last",
+                    "collectable": false,
+                    "row": 8,
+                    "col": 6,
+                    "data": {
+                        "locked": true,
+                        "requires": -1,
+                        "collected": false,
+                        "puzzle": null
+                    }
+                },
+                {
+                    "class": "prof",
+                    "collectable": false,
+                    "row": 5,
+                    "col": 4,
+                    "data": {
+                        "long": "TXT_L5_PROF_1",
+                        "short": "TXT_L5_PROF_2"
+                    }
+                }
+            ],
+            "inventory": [],
+            "lesson": ""
+        }
+    ],
+    "outro": [
+        {
+            "image": "_/img/intro/outro_01.png",
+            "content": "TXT_OUTRO_SLIDE_01"
+        },
+        {
+            "image": "_/img/intro/outro_02.png",
+            "content": "TXT_OUTRO_SLIDE_02"
+        },
+        {
+            "image": "_/img/intro/outro_03.png",
+            "content": "TXT_OUTRO_SLIDE_03"
+        },
+        {
+            "image": "_/img/intro/outro_03.png",
+            "content": "TXT_OUTRO_SLIDE_04"
+        },
+        {
+            "image": "_/img/intro/outro_03.png",
+            "content": "TXT_OUTRO_SLIDE_05"
+        }
+    ]
+}

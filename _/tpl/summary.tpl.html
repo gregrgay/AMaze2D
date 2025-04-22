@@ -1,0 +1,13 @@
+<div class="container summary">
+	<div class="content" tabindex="0">
+		<div class="main">
+			<div ng-bind-html="l10n.TXT_PAGE_SUMMARY"></div>
+			<div>
+				<form action="_/accessibility_guidelines.pdf" method="get" target="_blank">
+				<button type="submit" id="btnGuide"><span class="icon-download"></span> {{l10n.BTN_DOWNLOAD_GUIDE}}</button>
+				</form>
+				<button id="btnNext" ng-click="openMenu($event)" ng-keydown="openMenu($event)">{{l10n.BTN_MENU}} <span class="icon-menu"></span></button>
+			</div>
+		</div>
+	</div>
+</div>
